@@ -12,7 +12,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar (actions: [Icon(Icons.star)], leading: Icon(Icons.phone), title: Text ("App")),
+        appBar: AppBar (
+          backgroundColor: Colors.white,
+          leadingWidth: 200,
+          leading: Container(
+            width: double.infinity,
+            height: 150,
+            margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text("금호동 3가",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(Icons.expand_more,
+                       size: 28.0,
+                       color: Colors.black,
+                  ),
+                ],
+              ),
+            ),
+          ),
         body: SizedBox(
           //TextButton, IconButton, ElevatedButton
           child: TextButton(
