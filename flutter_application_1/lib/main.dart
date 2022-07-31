@@ -4,8 +4,34 @@ void main() {
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar (actions: [Icon(Icons.star)], leading: Icon(Icons.phone), title: Text ("App")),
+        body: SizedBox(
+          //TextButton, IconButton, ElevatedButton
+          child: TextButton(
+            child: Text('글자'),
+            onPressed: (){},
+            style: ButtonStyle()
+          )
+          ),
+        ),
+      );
+  }
+}
+//
+// child: Text("안녕하세요",
+// style: TextStyle( color: Color(0xff094d91), fontSize:50, fontWeight: FontWeight.w700 ),
+// //Color.fromRGBO (RGB color)
+
+class Box extends StatelessWidget {
+  const Box({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
